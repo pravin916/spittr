@@ -7,17 +7,42 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class Spittle {
 
-  private final Long id;
-  private final String message;
-  private final Date time;
+  private Long id;
+  private String message;
+  private Date time;
   private Double latitude;
-  private Double longitude;
+  public void setId(Long id) {
+	this.id = id;
+}
+
+public void setMessage(String message) {
+	this.message = message;
+}
+
+public void setTime(Date time) {
+	this.time = time;
+}
+
+public void setLatitude(Double latitude) {
+	this.latitude = latitude;
+}
+
+public void setLongitude(Double longitude) {
+	this.longitude = longitude;
+}
+
+private Double longitude;
 
   public Spittle(String message, Date time) {
     this(null, message, time, null, null);
   }
   
-  public Spittle(Long id, String message, Date time, Double longitude, Double latitude) {
+  public Spittle() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+public Spittle(Long id, String message, Date time, Double longitude, Double latitude) {
     this.id = id;
     this.message = message;
     this.time = time;
